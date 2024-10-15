@@ -1,5 +1,6 @@
 {
   "name": "prismaticoder/maker-checker-laravel",
+  "version": "0.1.0",
   "description": "A package for simplifying the integration of a maker-checker approval process to your Laravel application.",
   "keywords": [
     "php",
