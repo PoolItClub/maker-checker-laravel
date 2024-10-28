@@ -70,7 +70,7 @@ class RequestBuilder
     }
 
     /**
-     * Specify the user making the request.
+     * Specify the account making the request.
      *
      * @param \Illuminate\Database\Eloquent\Model $maker
      *
@@ -81,6 +81,21 @@ class RequestBuilder
         $this->assertModelCanMakeRequests($maker);
 
         $this->request->maker()->associate($maker);
+
+        return $this;
+    }
+        /**
+     * Specify the user making the request.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $maker
+     *
+     * @return \Prismaticoder\MakerChecker\RequestBuilder
+     */
+    public function byUser(Model $maker): self
+    {
+       // $this->assertModelCanMakeRequests($maker);
+
+        $this->request->user()->associate($maker);
 
         return $this;
     }
